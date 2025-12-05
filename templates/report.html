@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>System Performance Report</title>
+    <link rel="stylesheet" href="/static/css/report.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Engineering Analysis Report</h1>
+            <p>Generated Session ID: #A1-9982 | Status: <span style="color:rgb(66, 153, 66)">VALIDATED</span></p>
+        </div>
+
+        <!-- NEW LAYOUT: Charts Side by Side -->
+        <div class="charts-row">
+
+            <!-- CHART 1: RESPONSE TIME -->
+            <div class="card half-width">
+                <h2>⏱️ Response Time Analysis</h2>
+                <div class="chart-container">
+                    <canvas id="responseChart"></canvas>
+                </div>
+                <div class="stats-row">
+                    <div class="stat-box">
+                        <div class="label">Normal</div>
+                        <div class="value">2.03s</div>
+                    </div>
+                    <div class="stat-box highlight">
+                        <div class="label">Ambulance</div>
+                        <div class="value">1.79s</div>
+                    </div>
+                </div>
+                <p class="note">Emergency priority logic reduces latency by ~11.8%.</p>
+            </div>
+
+            <!-- CHART 2: ACCURACY -->
+            <div class="card half-width">
+                <h2>🎯 Detection Accuracy</h2>
+                <div class="chart-container">
+                    <canvas id="accuracyChart"></canvas>
+                </div>
+                <div class="stats-row">
+                    <div class="stat-box">
+                        <div class="label">Initial</div>
+                        <div class="value">62.5%</div>
+                    </div>
+                    <div class="stat-box highlight">
+                        <div class="label">Calibrated</div>
+                        <div class="value">100%</div>
+                    </div>
+                </div>
+                <p class="note">Model calibration shows rapid learning curve.</p>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <button onclick="window.location.href='/monitor'" class="btn">🔙 Return to Dashboard</button>
+            <button onclick="window.print()" class="btn">🖨️ Print Report</button>
+        </div>
+    </div>
+
+    <script src="/static/js/report.js"></script>
+</body>
+
+</html>

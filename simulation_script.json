@@ -1,0 +1,82 @@
+{
+    "loop_duration": 54,
+    "timeline": [
+        {
+            "start": 0,
+            "end": 9,
+            "phase_name": "DENSITY_ANALYSIS_V",
+            "r1_count": 5,
+            "r2_count": 0,
+            "ambulance": false,
+            "decision": "ROAD1",
+            "servo1": 90,
+            "servo2": 90
+        },
+        {
+            "start": 9,
+            "end": 19,
+            "phase_name": "GRID_RESET_SEQ_1",
+            "r1_count": 0,
+            "r2_count": 0,
+            "ambulance": false,
+            "decision": "ROAD1",
+            "servo1": 90,
+            "servo2": 90
+        },
+        {
+            "start": 19,
+            "end": 24,
+            "phase_name": "EMERGENCY_TRACKING_A",
+            "r1_count": 5,
+            "r2_count": 2,
+            "ambulance": true,
+            "decision": "ROAD1",
+            "servo1": 0,
+            "servo2": 90
+        },
+        {
+            "start": 24,
+            "end": 34,
+            "phase_name": "GRID_RESET_SEQ_2",
+            "r1_count": 0,
+            "r2_count": 0,
+            "ambulance": false,
+            "decision": "ROAD1",
+            "servo1": 90,
+            "servo2": 90
+        },
+        {
+            "start": 34,
+            "end": 39,
+            "phase_name": "EMERGENCY_TRACKING_B",
+            "r1_count": 6,
+            "r2_count": 2,
+            "ambulance": true,
+            "decision": "ROAD1",
+            "servo1": 0,
+            "servo2": 90
+        },
+        {
+            "start": 39,
+            "end": 49,
+            "phase_name": "GRID_RESET_SEQ_3",
+            "r1_count": 0,
+            "r2_count": 0,
+            "ambulance": false,
+            "decision": "ROAD1",
+            "servo1": 90,
+            "servo2": 90
+        },
+        {
+            "start": 49,
+            "end": 54,
+            "phase_name": "EMERGENCY_TRACKING_C",
+            "r1_count": 7,
+            "r2_count": 2,
+            "ambulance": true,
+            "decision": "ROAD1",
+            "servo1": 0,
+            "servo2": 90
+        }
+    ]
+}

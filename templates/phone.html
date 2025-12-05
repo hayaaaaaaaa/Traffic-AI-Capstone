@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sensor Node</title>
+    <link rel="stylesheet" href="/static/css/phone.css">
+</head>
+
+<body>
+    <div class="hud-container">
+        <!-- Live Video -->
+        <video id="v" autoplay playsinline></video>
+
+        <!-- HUD Elements -->
+        <div class="header">
+            <div class="data-box">CAM_ID: 01</div>
+            <div class="data-box">UPLINK: <span style="color:#0f0">STABLE</span></div>
+            <div class="data-box"><span class="rec-dot"></span> LIVE</div>
+        </div>
+
+        <div class="grid-line g-v"></div>
+        <div class="grid-line g-h"></div>
+
+        <div class="footer">
+            <div style="font-size: 1.2em; font-weight: bold; letter-spacing: 2px;">
+                AI OPTICAL SENSOR SYSTEM
+            </div>
+            <div style="font-size: 0.8em; margin-top: 5px;">
+                PACKETS SENT: <span id="pkts">0</span>
+            </div>
+        </div>
+
+        <canvas id="c" style="display:none"></canvas>
+    </div>
+
+    <script src="/static/js/camera.js"></script>
+    <script>
+        // Counter animation
+        let count = 0;
+        setInterval(() => {
+            count++;
+            document.getElementById('pkts').innerText = count;
+        }, 200);
+    </script>
+</body>
+
+</html>

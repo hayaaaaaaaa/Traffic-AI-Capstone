@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Traffic Command</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h2 style="color: var(--highlight); margin-top: 0; text-align: center;">AI TRAFFIC CONTROLLER</h2>
+    
+    <div class="layout">
+        <!-- LEFT: Video Feed -->
+        <div class="video-frame">
+            <img src="/video_feed" alt="Waiting for Optical Sensor...">
+            <div class="hud-overlay">
+                <div class="target-box t-left"></div>
+                <div class="target-box t-right"></div>
+                <div style="position: absolute; bottom: 10px; left: 10px; color: #0f0; font-family: monospace;">
+                    ● LIVE INFERENCE | MODEL: YOLOv8-NANO
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: Data Panel -->
+        <div class="panel">
+            
+            <!-- Decision Box -->
+            <div class="card decision-box">
+                <div class="label">OPTIMAL SIGNAL PHASE</div>
+                <div class="value" id="decision">---</div>
+                <div class="label" id="latency" style="margin-top: 5px;">Latency: --ms</div>
+            </div>
+
+            <!-- ALERT BOX (Hidden until Ambulance) -->
+            <div id="amb-alert" class="amb-alert">
+                EMERGENCY PREEMPTION!!
+                <div id="amb-loc" style="font-size: 0.8em; margin-top: 5px; color: yellow;">
+                    Calculating Centroid...
+                </div>
+            </div>
+
+            <!-- Counts -->
+            <div class="card">
+                <div class="metric-row">
+                    <div>
+                        <div class="label">ROAD 1 DENSITY</div>
+                        <div class="value" id="r1">0</div>
+                    </div>
+                    <div>
+                        <div class="label">ROAD 2 DENSITY</div>
+                        <div class="value" id="r2">0</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="card">
+                <div class="metric-row">
+                    <div>
+                        <div class="label">AI CONFIDENCE</div>
+                        <div class="value" id="conf">--%</div>
+                    </div>
+                    <div>
+                        <div class="label">SCENE TIMER</div>
+                        <div class="value" id="timer">00s</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Log -->
+            <div class="log-terminal" id="sys-log">
+                > System Booting...
+            </div>
+            
+            <!-- Link to Report -->
+            <button onclick="window.location.href='/report'" style="width: 100%; padding: 10px; background: var(--purple-mid); color: white; border: none; font-weight: bold; cursor: pointer;">
+                VIEW ANALYTICS REPORT
+            </button>
+        </div>
+    </div>
+
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>

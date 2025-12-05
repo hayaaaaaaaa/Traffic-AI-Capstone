@@ -8,9 +8,11 @@
             "r1_count": 5,
             "r2_count": 0,
             "ambulance": false,
+            "amb_loc": null,
             "decision": "ROAD1",
             "servo1": 90,
-            "servo2": 90
+            "servo2": 90,
+            "log": "Vertical Artery Active. Processing Normal Flow (4-5 Vehicles)."
         },
         {
             "start": 9,
@@ -19,9 +21,11 @@
             "r1_count": 0,
             "r2_count": 0,
             "ambulance": false,
+            "amb_loc": null,
             "decision": "ROAD1",
             "servo1": 90,
-            "servo2": 90
+            "servo2": 90,
+            "log": "Cycle Complete. Resetting Grid for Emergency Simulation 1."
         },
         {
             "start": 19,
@@ -32,7 +36,8 @@
             "ambulance": true,
             "decision": "ROAD1",
             "servo1": 0,
-            "servo2": 90
+            "servo2": 90,
+            "log": "CRITICAL: Ambulance Detected at HEAD of queue. Priority Active."
         },
         {
             "start": 24,
@@ -41,9 +46,11 @@
             "r1_count": 0,
             "r2_count": 0,
             "ambulance": false,
+            "amb_loc": null,
             "decision": "ROAD1",
             "servo1": 90,
-            "servo2": 90
+            "servo2": 90,
+            "log": "Simulation Interval. Resetting Grid for Emergency Simulation 2."
         },
         {
             "start": 34,
@@ -54,7 +61,8 @@
             "ambulance": true,
             "decision": "ROAD1",
             "servo1": 0,
-            "servo2": 90
+            "servo2": 90,
+            "log": "CRITICAL: Ambulance Detected in MIDDLE cluster. Clearing Lane."
         },
         {
             "start": 39,
@@ -63,9 +71,11 @@
             "r1_count": 0,
             "r2_count": 0,
             "ambulance": false,
+            "amb_loc": null,
             "decision": "ROAD1",
             "servo1": 90,
-            "servo2": 90
+            "servo2": 90,
+            "log": "Simulation Interval. Resetting Grid for Emergency Simulation 3."
         },
         {
             "start": 49,
@@ -76,7 +86,8 @@
             "ambulance": true,
             "decision": "ROAD1",
             "servo1": 0,
-            "servo2": 90
+            "servo2": 90,
+            "log": "CRITICAL: Ambulance Detected at REAR. Extended Green Light duration."
         }
     ]
 }
